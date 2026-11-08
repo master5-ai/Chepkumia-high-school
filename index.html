@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Chepkumia High School</title>
+</head>
+<body>
+
+<header>
+<img src="logo.png" alt="Logo" style="height:60px;">
+<h2>CHEPKUMIA HIGH SCHOOL</h2>
+<nav>
+<a href="#" onclick="showSection('home')">Home</a> |
+<a href="#" onclick="showSection('about')">About</a> |
+<a href="#" onclick="showSection('academics')">Academics</a> |
+<a href="#" onclick="showSection('admissions')">Admissions</a> |
+<a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+</header>
+
+<section id="home">
+<h1>Welcome to Chepkumia High School</h1>
+<p>Excellence and Discipline</p>
+<p>Football Hub: Chepkumia FC - Champions 2023</p>
+</section>  
+
+<section id="about" style="display:none;">
+<h2>About Us</h2>
+<p>Chepkumia High School is a top performing school in Nandi County.</p>
+<p>Mission: To provide holistic education.</p>
+<p>Vision: To be a center of excellence.</p>
+</section>
+
+<section id="academics" style="display:none;">
+<h2>Academics</h2>
+<p>Subjects: Maths, English, Kiswahili, Physics, Chemistry, Biology</p>
+<p>KCSE 2023 Mean: 7.8 | 2024 Mean: 8.1</p>
+</section>
+<div id="academics-details" style="display:none;">
+  <p>Here are academics details - KCSE results, departments, etc.</p>
+</div>
+
+<section id="admissions" style="display:none;">
+<h2>Admissions</h2>
+<p>Requirements: KCPE Slip, Birth Certificate</p>
+<p>How to Apply: Visit School or Download Letter</p>
+<a href="admission.pdf" download><button>Download Admission Letter</button></a> 
+</section>
+
+<section id="contact" style="display:none;">
+<h2>Contact Us</h2>
+<p>Address: P.O Box 123, Chepkumia</p>
+<p>Phone: +254 700 000 000</p>
+<p>Email: info@chepkumiahigh.ac.ke</p>
+</section>
+
+<footer>
+<p>© 2026 Chepkumia High School. All Rights Reserved.</p>
+<p>Designed by Evanson Kiplimo</p>
+</footer>
+
+<script>
+function showSection(id) {
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
+  document.getElementById('academics').style.display = 'none';
+  document.getElementById('admissions').style.display = 'none';
+  document.getElementById('contact').style.display = 'none';
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+<script>
+  document.getElementById('academics').onclick = function() {
+    var details = document.getElementById('academics-details');
+    if(details.style.display === 'none'){
+      details.style.display = 'block';
+    } else {
+      details.style.display = 'none';
+    }
+  };
+</script>
+</body>
+</html>
